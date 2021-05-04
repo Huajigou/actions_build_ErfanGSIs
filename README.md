@@ -29,6 +29,7 @@ ZenUI
 MIUI	
 OxygenOS
 Pixel
+Flyme
 ### 11 R： ##
 > Generic	
 Pixel
