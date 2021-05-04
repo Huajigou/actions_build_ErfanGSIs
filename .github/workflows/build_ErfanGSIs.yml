@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://ip204419440.out.azhimalayanvh.com/Firmware/Flyme/note9/8.1.5.0/cn/20210419202312/f2f844c8/update.zip?ali_redirect_domain=firmware.meizu.com&ali_redirect_ex_ftag=c691c7d2ad529cd389482a8c61a8698f6eae379436528dd1&ali_redirect_ex_tmining_ts=1620129454&ali_redirect_ex_tmining_expire=3600&ali_redirect_ex_hot=100
+  ROM_URL: https://download.meizu.com/Firmware/Flyme/note9/8.20.11.10/cn_daily/20201110043136/ad9e0bc2/update.zip
   ROM_NAME: Flyme
   TZ: Asia/Shanghai
 
