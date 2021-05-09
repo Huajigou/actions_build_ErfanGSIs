@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://download.meizu.com/Firmware/Flyme/note9/8.20.11.10/cn_daily/20201110043136/ad9e0bc2/update.zip
-  ROM_NAME: Flyme
+  ROM_URL: https://coloroswebsitefs.coloros.com/coloroswebsite-coloros-com/grs_20210426170234/PBEM00_11_OTA_3210_all_7OKRjyFj9w6s.ozip
+  ROM_NAME: ColorOS
   TZ: Asia/Shanghai
 
 jobs:
