@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: http://download.h2os.com/OnePlus5/MP/OnePlus5Hydrogen_23_OTA_065_all_2012030353_e8c692aa5e0c45ca.zip
-  ROM_NAME: OxygenOS
+  ROM_URL: https://bigota.d.miui.com/V11.0.6.0.PDCCNXM/miui_MI6X_V11.0.6.0.PDCCNXM_f049df201b_9.0.zip
+  ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
 jobs:
@@ -57,7 +57,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME --ab
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME --aonly
        
        - name: zip GSI  
          run: |
