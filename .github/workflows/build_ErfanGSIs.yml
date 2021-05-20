@@ -50,25 +50,24 @@ jobs:
               sed -i 's/exit 1//g' $GITHUB_WORKSPACE/ErfanGSIs/url2GSI.sh
        
 
-       - name: Setting up ErfanGSI requirements with Xiaoxin script
+         - name: Setting up ErfanGSI requirements with Xiaoxin script
          run: |
               cd ErfanGSIs
               mkdir ./output
-              sudo bash setup.sh
-              
+              wget https://raw.githubusercontent.com/TimeMapleLing/actions_build_SGSI/main/bin/setup.sh -o setup-xiaoxin.sh
+              sudo bash setup-xiaoxin.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME --aonly
+         run: sudo ./ErfanGSIs/url2GSI.sh -c -b $ROM_URL $ROM_NAME --aonly
        
-       - name: zip GSI  
+       - name: Zip GSI  
          run: |
+              cd $GITHUB_WORKSPACE/ErfanGSIs/output
               mkdir final
-              zip -r final/GSI.zip /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
+              zip -r final/GSI.zip ./*
        
        - name: Upload GSI to WeTransfer
          run: |
+              cd $GITHUB_WORKSPACE/ErfanGSIs/output
               curl -sL https://git.io/file-transfer | sh
-              ./transfer wet final/GSI.zip
-
-         
-            
+              ./transfer wet ./final/GSI.zip
