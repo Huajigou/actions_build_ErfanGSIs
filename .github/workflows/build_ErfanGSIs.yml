@@ -50,15 +50,15 @@ jobs:
               sed -i 's/exit 1//g' $GITHUB_WORKSPACE/ErfanGSIs/url2GSI.sh
        
 
-       - name: Setting up ErfanGSI requirements with Xiaoxin script
+       - name: Setting up ErfanGSI requirements
          run: |
+              sudo chmod -R 777 ErfanGSIs
               cd ErfanGSIs
-              mkdir ./output
-              wget https://raw.githubusercontent.com/TimeMapleLing/actions_build_SGSI/main/bin/setup.sh -o setup-xiaoxin.sh
-              sudo bash setup-xiaoxin.sh
+              sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh -c -b $ROM_URL $ROM_NAME --aonly
+         run: |
+              sudo ./ErfanGSIs/url2GSI.sh -c -b $ROM_URL $ROM_NAME --aonly
        
        - name: Zip GSI  
          run: |
