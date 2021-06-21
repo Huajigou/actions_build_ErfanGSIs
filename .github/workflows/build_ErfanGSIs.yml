@@ -71,11 +71,4 @@ jobs:
               curl -sL https://git.io/file-transfer | sh
               ./transfer wet ./final/GSI.zip
 
-       - name: 上传至Release...
-        uses: ncipollo/release-action@v1.8.0
-        with:
-          artifacts: "${{ github.workspace }}/ErfanGSIs/output*"
-          tag: "${{ secrets.REPACK_NAME }}_${{ env.BUILD_TIME }}"
-          body: "${{ secrets.REPACK_NAME }}_${{ env.BUILD_TIME }}"
-          token: ${{ secrets.GITHUB_TOKEN }}
-
+       
