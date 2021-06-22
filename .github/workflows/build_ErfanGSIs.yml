@@ -69,9 +69,8 @@ jobs:
          uses: ncipollo/release-action@v1.8.6
          with:
            artifacts: ${{ github.workspace }}/ErfanGSIs/output*
-           name: ErfanGSI-${{ env.ROM_NAME }}-unpack
-           tag: ErfanGSI-${{ env.ROM_NAME }}-${{ github.run_number }}
-           body: Use actions auto bulid 
+           name: ErfanGSI-${{ env.ROM_NAME }}
+           tag: ErfanGSI-${{ env.ROM_NAME }}}
            token: ${{ secrets.GITHUB_TOKEN }}
 
 
