@@ -64,11 +64,15 @@ jobs:
          run: |
               mkdir final
               zip -r final/GSI.zip /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
-       
-       - name: Upload GSI to WeTransfer
-         run: |
-              cd $GITHUB_WORKSPACE/ErfanGSIs/output
-              curl -sL https://git.io/file-transfer | sh
-              ./transfer wss ./final/GSI.zip
+
+       - name: Upload GSI to action-gh-release...
+         uses: ncipollo/release-action@v1.8.6
+         with:
+           artifacts: ${{ github.workspace }}/ErfanGSIs/output*
+           name: ErfanGSI-${{ env.ROM_NAME }}-unpack
+           tag: ErfanGSI-${{ env.ROM_NAME }}-${{ github.run_number }}
+           body: Use actions auto bulid 
+           token: ${{ secrets.GITHUB_TOKEN }}
+
 
        
