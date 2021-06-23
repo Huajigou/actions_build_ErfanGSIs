@@ -72,7 +72,7 @@ jobs:
            name: ErfanGsis-${{ env.ROM_NAME }}
            tag: main
            body: ErfanGsis-${{ env.ROM_NAME }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           
 
        
