@@ -66,13 +66,13 @@ jobs:
               zip -r final/GSI.zip /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
 
        - name: Upload GSI to action-gh-release...
-         uses: ncipollo/release-action@v1.8.0
+         uses: ncipollo/release-action@v1.8.6
          with:
-           artifacts: "${{ github.workspace }}ErfanGSIs/output/final/*"
-           name: ErfanGsis-${{ env.ROM_NAME }}
-           tag: main
-           body: ErfanGsis-${{ env.ROM_NAME }}
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+           artifacts: "${{ github.workspace }}/ErfanGSIs/output/final*"
+           name: ErfanGSI-${{ env.ROM_NAME }}
+           tag: ErfanGSI-${{ env.ROM_NAME }}
+           body: ErfanGSI-${{ env.ROM_NAME }}
+           token: ${{ secrets.GITHUB_TOKEN }}
           
 
        
