@@ -28,7 +28,7 @@ MIUI
 OxygenOS
 Pixel
 Flyme
-ColorOS
+FuntouchOS
 ### 11 R： ##
 > Generic	
 Pixel
