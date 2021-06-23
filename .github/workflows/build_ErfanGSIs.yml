@@ -70,9 +70,9 @@ jobs:
          with:
            artifacts: "${{ github.workspace }}ErfanGSIs/output/final/*"
            name: ErfanGsis-${{ env.ROM_NAME }}
-           tag_name: main
-         env:
+           tag: main
+           body: "${{ env.ROM_NAME }}_${{ env.BUILD_TIME }}"
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-
+          
 
        
