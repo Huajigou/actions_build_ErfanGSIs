@@ -66,9 +66,9 @@ jobs:
               zip -r final/GSI.zip /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
 
        - name: Upload GSI to action-gh-release...
-         uses: softprops/action-gh-release@v1
+         uses: ncipollo/release-action@v1.8.0
          with:
-           files: /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
+           artifacts: "${{ github.workspace }}ErfanGSIs/output/final/*"
            name: ErfanGsis-${{ env.ROM_NAME }}
            tag_name: main
          env:
